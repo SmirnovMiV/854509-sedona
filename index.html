@@ -6,10 +6,10 @@
   </head>
   <body>
     <header class="main-header">
-      <a class="main-header-logo">
-        <img src="img/logo.png" width="140" height="70" alt="Логотип города Седона">
-      </a>
       <nav class="main-navigation">
+        <a class="main-header-logo">
+          <img src="img/logo.png" width="140" height="72" alt="Логотип города Седона">
+        </a>
         <ul class="site-navigation">
           <li>
             <a href="info.html">Информация</a>
@@ -28,20 +28,19 @@
     </header>
 
     <main class="container">
-      <img class="big-photo" src="img/photo-canyon.jpg" width="100%" alt="Ущелье Седоны">
+
+      <h1 class="visually-hidden">Сайт курорта Седона</h1>
 
       <section class="greeting">
-        <h1>
-          <span class="welcome">Welcome</span>
-          <span class="gordeus">-to the gordeous-</span>
-          <span class="sedona">Sedona</span>
-        </h1>
-        <span class="lead">"Because the Grand Canyon sucks!"</span>        
+        <h2 class="visually-hidden">Добро пожаловать в Седону!</h2>
+        <img class="big-photo" src="img/photo-canyon.jpg" width="100%" alt="Ущелье Седоны">
+        <img class="big-photo" src="welcome.svg" width="459" height="353" alt="Welcome -to the gordeous- Sedona">     
       </section>
 
       <section class="features">
-        <h3>Седона-небольшой городок в Аризоне, заслуживающий большего!</h3>
-        <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+        <h2 class="visually-hidden">Преимущества Седоны</h2>
+        <b>Седона-небольшой городок в Аризоне, заслуживающий большего!</b>
+        <p class="gray-text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
 
       <!-- Тут разметка будет добавлена в следующих заданиях -->
       
@@ -49,8 +48,8 @@
 
       <section class="search">
         <h2>Заинтересовались?</h2>
-        <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <a href="#" class="search-form-button">Поиск гостиницы в Седоне</a>
+        <p class="gray-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <span class="search-form-button">Поиск гостиницы в Седоне</span>
 
         <!-- Тут будет карта -->
 
@@ -59,28 +58,25 @@
 
     <footer class="main-footer">
       <a href="#">#visitsedona</a>
-
-      <div class="footer-social">
-        <ul>
-          <li>
-            <a href="#">Твитер</a>
-          </li>
-          <li>
-            <a href="#">Фейсбук</a>
-          </li>
-          <li>
-            <a href="#">Ютуб</a>
-          </li>
-        </ul>        
-      </div>
-
-      <div class="footer-copyright">
+      
+      <ul class="footer-social">
+        <li>
+          <a href="#">Твитер</a>
+        </li>
+        <li>
+          <a href="#">Фейсбук</a>
+        </li>
+        <li>
+          <a href="#">Ютуб</a>
+        </li>
+      </ul>    
+      
+      <p class="footer-copyright">
         <p>website by</p>
         <a href="https://htmlacademy.ru/intensive/htmlcss">
           <img src="img/html-academy-logo.png" alt="Логотип HTML-Academy">
         </a>         
-      </div>      
+      </p>
     </footer>
-
   </body>
 </html>
