@@ -47,9 +47,10 @@
       </section>
 
       <section class="search">
-        <h2>Заинтересовались?</h2>
+        <h2 class="visually-hidden">Карта и поиск жилья</h2>
+        <b>Заинтересовались?</b>
         <p class="gray-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <span class="search-form-button">Поиск гостиницы в Седоне</span>
+        <button type="button" class="search-form-button buttons">Поиск гостиницы в Седоне</button>
 
         <!-- Тут будет карта -->
 
@@ -61,19 +62,13 @@
       
       <ul class="footer-social">
         <li>
-          <a href="#">Твитер
-            <img src="img/icon-tw.svg" width="17" height="15" alt="Твитер">
-          </a>
+          <a href="#">Твитер</a>
         </li>
         <li>
-          <a href="#">Фейсбук
-            <img src="img/icon-fb.svg" width="17" height="15" alt="Фейсбук">
-          </a>
+          <a href="#">Фейсбук</a>
         </li>
         <li>
-          <a href="#">Ютуб
-            <img src="img/icon-yt.svg" width="17" height="15" alt="Ютуб">
-          </a>
+          <a href="#">Ютуб</a>
         </li>
       </ul>    
       
@@ -84,5 +79,29 @@
         </a>         
       </p>
     </footer>
+
+    <section class="search-form-modal">
+      <h2 class="visually-hidden">Форма поиска гостиницы</h2>
+      <form class="searh-form" method="get" action="https://echo.htmlacademy.ru">
+        <p>
+          <label for="date-arrival"> Дата заезда</label>
+          <input type="date" name="date-arrival" id="date-arrival" placeholder="24 апреля 2017">
+        </p>
+        <p>
+          <label for="date-departure" >Дата выезда</label>
+          <input type="date" name="date-departure" id="date-departure" placeholder="4 июля 2017">
+        </p>
+        <p>
+          <label for="number-of-adults">Взрослые</label>
+          <input type="number" name="number-of-adults" id="number-of-adults" min="0" value="2">
+        </p>
+        <p>
+          <label for="number-of-children">Дети</label>
+          <input type="number" name="number-of-children" id="number-of-children" min="0" value="0">
+        </p>
+        <button class="search-button buttons" type="submit" >Найти</button>
+      </form>      
+    </section>
+  
   </body>
 </html>

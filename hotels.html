@@ -31,7 +31,56 @@
     <main class="container">
       <h1 class="visually-hidden">Поиск гостиницы в Седоне</h1>
 
-      <!-- Тут будет секция с фильтрами для гостиниц -->
+      <section class="hotels-filter">
+        <h2 class="visually-hidden">Фильтр поиска гостиницы</h2>
+        <form class="filtres" method="get"  action="https://echo.htmlacademy.ru">
+          <fieldset>
+            <legend>Инфраструктура:</legend>
+            <ul>
+              <li>                
+                <input class="checkbox" type="checkbox" name="pool" id="pool" checked>
+                <label for="pool" >Бассейн</label>
+              </li>
+              <li>
+                <input class="checkbox" type="checkbox" name="parking" id="parking">
+                <label for="parking" >Парковка</label>
+              </li>
+              <li>
+                <input class="checkbox" type="checkbox" name="wi-fi" id="wi-fi">
+                <label for="wi-fi" >wi-fi</label>
+              </li>
+            </ul>            
+          </fieldset>
+          <fieldset>
+            <legend>Тип жилья:</legend>
+            <ul>
+              <li>
+                <input class="checkbox" type="checkbox" name="hotel" id="hotel" checked>
+                <label for="hotel" >Гостиница</label>
+              </li>
+              <li>
+                <input class="checkbox" type="checkbox" name="motel" id="motel" checked>
+                <label for="motel" >Мотель</label>                
+              </li>
+              <li>
+                <input class="checkbox" type="checkbox" name="apartaments" id="apartaments" checked>
+                <label for="apartaments">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+          <p>
+           <fieldset>
+            <legend>Стоимость в сутки(Р):</legend>
+            <p>
+              <input type="number" name="cost-min" id="cost-min" min="0" placeholder="От 0" aria-label="Цена от">
+              <input type="number" name="cost-max" id="cost-max" min="0" placeholder="До 3000" aria-label="Цена до">
+            </p>
+           </fieldset>
+           <!-- Не понял как сделать элемент с ползунком? -->
+           <button class="button" type="submit">Показать</button>
+          </p>
+        </form>        
+      </section>
 
       <section class="hotels-list">
         <h2 class="visually-hidden">Список гостиниц</h2>
@@ -46,12 +95,18 @@
               </p>
               <p class="right-group">
               <p class="gray-text">от 4000р.</p>
-              <span class="book btn" href="#">Забронировать</span>
+              <a class="book btn" href="#">Забронировать</a>
               </p>
             </div>
 
             <div class="hotel-ranking">
-              <span class="stars">****</span>
+              <p class="hotel-stars">
+                <span class="hotel-stars-text">4 Звезды</span>
+                <span class="hotel-stars-img"></span>
+                <span class="hotel-stars-img"></span>
+                <span class="hotel-stars-img"></span>
+                <span class="hotel-stars-img"></span>                
+              </p>
               <span class="ranking-block">
                 <p class="gray-text">Рейтинг:8,5</p>
               </span>
@@ -68,12 +123,17 @@
               </p>
               <p class="right-group">
               <p class="gray-text">от 3000р.</p>
-              <span class="book btn" href="#">Забронировать</span>
+              <a class="book btn" href="#">Забронировать</a>
               </p>
             </div> 
             
             <div class="hotel-ranking">
-              <span class="stars">***</span>
+              <p class="hotel-stars">
+                <span class="hotel-stars-text">3 Звезды</span>
+                <span class="hotel-stars-img"></span>
+                <span class="hotel-stars-img"></span>
+                <span class="hotel-stars-img"></span>                
+              </p>
               <span class="ranking-block">
                 <p class="gray-text">Рейтинг:8,9</p>
               </span>
@@ -90,11 +150,15 @@
               </p>
               <p class="right-group">
               <p class="gray-text">от 2000р.</p>
-              <span class="book btn" href="#">Забронировать</span>
+              <a class="book btn" href="#">Забронировать</a>
               </p>
             
             <div class="hotel-ranking">
-              <span class="stars">**</span>
+              <p class="hotel-stars">
+                <span class="hotel-stars-text">2 Звезды</span>
+                <span class="hotel-stars-img"></span>
+                <span class="hotel-stars-img"></span>                
+              </p>
               <span class="ranking-block">
                 <p class="gray-text">Рейтинг:9,2</p>
               </span>
@@ -110,19 +174,13 @@
 
       <ul class="footer-social">
         <li>
-          <a href="#">Твитер
-            <img src="img/icon-tw.svg" width="17" height="15" alt="Твитер">
-          </a>
+          <a href="#">Твитер</a>
         </li>
         <li>
-          <a href="#">Фейсбук
-            <img src="img/icon-fb.svg" width="17" height="15" alt="Фейсбук">
-          </a>
+          <a href="#">Фейсбук</a>
         </li>
         <li>
-          <a href="#">Ютуб
-            <img src="img/icon-yt.svg" width="17" height="15" alt="Ютуб">
-          </a>
+          <a href="#">Ютуб</a>
         </li>
       </ul> 
 
@@ -133,5 +191,6 @@
         </a>         
       </p>     
     </footer>
+    
   </body>
 </html>
