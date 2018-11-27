@@ -68,17 +68,20 @@
               </li>
             </ul>
           </fieldset>
-          <p>
-           <fieldset>
+          
+          <fieldset>
             <legend>Стоимость в сутки(Р):</legend>
             <p>
               <input type="number" name="cost-min" id="cost-min" min="0" placeholder="От 0" aria-label="Цена от">
               <input type="number" name="cost-max" id="cost-max" min="0" placeholder="До 3000" aria-label="Цена до">
             </p>
-           </fieldset>
-           <!-- Не понял как сделать элемент с ползунком? -->
-           <button class="button" type="submit">Показать</button>
-          </p>
+           <div>
+             <button class="slider-button" type="button" area-label="Кнопка ползунка левая"></button>
+             <button class="slider-button" type="button" area-label="Кнопка ползунка правая"></button>
+           </div>
+           <button class="button" type="submit">Показать</button>          
+        </fieldset>
+
         </form>        
       </section>
 
@@ -90,12 +93,12 @@
               <img src="img/minifoto-hotels-amara.jpg" width="135" height="90" alt="Гостиница Амара">
               <h3>Amara resort & spa</h3>
               <p class="left-group">
-                <p class="gray-text">Гостиница</p>
+                <span class="gray-text">Гостиница</span>
                 <a class="detail btn" href="#">Подробнее</a>                
               </p>
               <p class="right-group">
-              <p class="gray-text">от 4000р.</p>
-              <a class="book btn" href="#">Забронировать</a>
+                <span class="gray-text">от 4000р.</span>
+                <a class="book btn" href="#">Забронировать</a>
               </p>
             </div>
 
@@ -107,9 +110,7 @@
                 <span class="hotel-stars-img"></span>
                 <span class="hotel-stars-img"></span>                
               </p>
-              <span class="ranking-block">
-                <p class="gray-text">Рейтинг:8,5</p>
-              </span>
+              <p class="gray-text ranking-block">Рейтинг:8,5</p> 
             </div>
          </li>
 
@@ -118,12 +119,12 @@
               <img src="img/minifoto-hotels-desert.jpg" width="135" height="90" alt="Мотель Desert Quail">
               <h3>Desert Quail INN</h3>
               <p class="left-group">
-                <p class="gray-text">Мотель</p>
+                <span class="gray-text">Мотель</span>
                 <a class="detail btn" href="#">Подробнее</a>
               </p>
               <p class="right-group">
-              <p class="gray-text">от 3000р.</p>
-              <a class="book btn" href="#">Забронировать</a>
+                <span class="gray-text">от 3000р.</span>
+                <a class="book btn" href="#">Забронировать</a>
               </p>
             </div> 
             
@@ -134,9 +135,7 @@
                 <span class="hotel-stars-img"></span>
                 <span class="hotel-stars-img"></span>                
               </p>
-              <span class="ranking-block">
-                <p class="gray-text">Рейтинг:8,9</p>
-              </span>
+              <p class="gray-text ranking-block">Рейтинг:8,9</p> 
             </div>
          </li>
 
@@ -145,23 +144,22 @@
               <img src="img/minifoto-hotels-diablo.jpg" width="135" height="90" alt="Апартаменты Villas at POCO DIABLO">
               <h3>Villas at POCO DIABLO</h3>
               <p class="left-group">
-                <p class="gray-text">Апартаменты</p>
-                <a class="detail btn" href="#">Подробнее</a> 
+                <span class="gray-text">Апартаменты</span>
+                <a class="detail btn" href="#">Подробнее</a>
               </p>
               <p class="right-group">
-              <p class="gray-text">от 2000р.</p>
-              <a class="book btn" href="#">Забронировать</a>
+                <span class="gray-text">от 2000р.</span>
+                <a class="book btn" href="#">Забронировать</a>
               </p>
+            </div>
             
             <div class="hotel-ranking">
               <p class="hotel-stars">
                 <span class="hotel-stars-text">2 Звезды</span>
                 <span class="hotel-stars-img"></span>
                 <span class="hotel-stars-img"></span>                
-              </p>
-              <span class="ranking-block">
-                <p class="gray-text">Рейтинг:9,2</p>
-              </span>
+              </p>              
+              <p class="gray-text ranking-block">Рейтинг:9,2</p>              
             </div>
          </li>
 
@@ -185,12 +183,13 @@
       </ul> 
 
       <p class="footer-copyright">
-        <p>website by</p>
+        <span>website by</span>
         <a href="https://htmlacademy.ru/intensive/htmlcss">
-          <img src="img/logo-academy.svg" width="115" height="41" alt="Логотип HTML-Academy">
+          <img src="img/logo-academy.png" width="115" height="41" alt="Логотип HTML-Academy">
         </a>         
       </p>     
     </footer>
     
   </body>
 </html>
+
