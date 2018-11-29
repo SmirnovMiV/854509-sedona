@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
-  <body>
+  <body class="inner-page">
     <header class="main-header">
       
       <nav class="main-navigation">
@@ -22,7 +25,7 @@
             <a href="map.html">Карта штата</a>
           </li>
           <li class="current">
-            <a href="hotels.html">Гостиницы</a>
+            <a href="#">Гостиницы</a>
           </li>
         </ul>
       </nav>
@@ -72,8 +75,8 @@
           <fieldset>
             <legend>Стоимость в сутки(Р):</legend>
             <p>
-              <input type="number" name="cost-min" id="cost-min" min="0" placeholder="От 0" aria-label="Цена от">
-              <input type="number" name="cost-max" id="cost-max" min="0" placeholder="До 3000" aria-label="Цена до">
+              <input type="text" name="cost-min" id="cost-min" value="От 0" aria-label="Цена от">
+              <input type="text" name="cost-max" id="cost-max" value="До 3000" aria-label="Цена до">
             </p>
            <div>
              <button class="slider-button" type="button" aria-label="Кнопка ползунка левая"></button>
@@ -91,13 +94,15 @@
          <li>                        
             <div class="hotel-data">
               <img src="img/minifoto-hotels-amara.jpg" width="135" height="90" alt="Гостиница Амара">
-              <h3>Amara resort & spa</h3>
+              <a class="hotel-page" href="#">
+                <h3>Amara resort & spa</h3>
+              </a>
               <p class="left-group">
-                <span class="gray-text">Гостиница</span>
+                <span>Гостиница</span>
                 <a class="detail btn" href="#">Подробнее</a>                
               </p>
               <p class="right-group">
-                <span class="gray-text">от 4000р.</span>
+                <span>от 4000р.</span>
                 <a class="book btn" href="#">Забронировать</a>
               </p>
             </div>
@@ -110,20 +115,22 @@
                 <span class="hotel-stars-img"></span>
                 <span class="hotel-stars-img"></span>                
               </p>
-              <p class="gray-text ranking-block">Рейтинг:8,5</p> 
+              <p class="ranking-block">Рейтинг:8,5</p> 
             </div>
          </li>
 
          <li>
             <div class="hotel-data">
               <img src="img/minifoto-hotels-desert.jpg" width="135" height="90" alt="Мотель Desert Quail">
-              <h3>Desert Quail INN</h3>
+              <a class="hotel-page" href="#">
+                <h3>Desert Quail INN</h3>
+              </a>
               <p class="left-group">
-                <span class="gray-text">Мотель</span>
+                <span>Мотель</span>
                 <a class="detail btn" href="#">Подробнее</a>
               </p>
               <p class="right-group">
-                <span class="gray-text">от 3000р.</span>
+                <span>от 3000р.</span>
                 <a class="book btn" href="#">Забронировать</a>
               </p>
             </div> 
@@ -135,20 +142,22 @@
                 <span class="hotel-stars-img"></span>
                 <span class="hotel-stars-img"></span>                
               </p>
-              <p class="gray-text ranking-block">Рейтинг:8,9</p> 
+              <p class="ranking-block">Рейтинг:8,9</p> 
             </div>
          </li>
 
          <li>
             <div class="hotel-data">
               <img src="img/minifoto-hotels-diablo.jpg" width="135" height="90" alt="Апартаменты Villas at POCO DIABLO">
-              <h3>Villas at POCO DIABLO</h3>
+              <a class="hotel-page" href="#">
+                <h3>Villas at POCO DIABLO</h3>
+              </a>
               <p class="left-group">
-                <span class="gray-text">Апартаменты</span>
+                <span>Апартаменты</span>
                 <a class="detail btn" href="#">Подробнее</a>
               </p>
               <p class="right-group">
-                <span class="gray-text">от 2000р.</span>
+                <span>от 2000р.</span>
                 <a class="book btn" href="#">Забронировать</a>
               </p>
             </div>
@@ -159,7 +168,7 @@
                 <span class="hotel-stars-img"></span>
                 <span class="hotel-stars-img"></span>                
               </p>              
-              <p class="gray-text ranking-block">Рейтинг:9,2</p>              
+              <p class="ranking-block">Рейтинг:9,2</p>              
             </div>
          </li>
 
@@ -172,13 +181,13 @@
 
       <ul class="footer-social">
         <li>
-          <a href="#">Твитер</a>
+          <a class="twitter" href="#">Твитер</a>
         </li>
         <li>
-          <a href="#">Фейсбук</a>
+          <a class="facebook" href="#">Фейсбук</a>
         </li>
         <li>
-          <a href="#">Ютуб</a>
+          <a class="youtube" href="#">Ютуб</a>
         </li>
       </ul> 
 
