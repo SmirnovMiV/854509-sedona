@@ -1,0 +1,274 @@
+body {
+	margin: 0;
+
+	font-family: 'PT Sans', Arial, sans-serif;
+	font-size: 14px;
+	line-height: 21px;	
+	color: #333333;
+	text-transform: uppercase;
+
+	background-color: #f2f2f2;
+}
+
+a {
+	text-decoration: none;	
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.main-navigation {
+	color: black;
+	font-weight: bold;
+	line-height: 26px;	
+
+	background-color: #ffffff;
+}
+
+.site-navigation,
+.footer-social {
+	list-style: none;
+}
+
+.main-navigation a,
+.main-footer a,
+.hotel-page {
+	color: black;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus,
+.main-footer a:hover,
+.main-footer a:focus {
+	color: #81b3d2;
+}
+
+.site-navigation a:active,
+.main-footer a:active {
+		color: rgba(0, 0, 0, 0.3);
+}
+
+.greeting {
+	background-image: url("../img/photo-canyon.jpg");
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	text-align: center;
+	
+	background-color: #333333;
+}
+
+.features{
+	background-color: #ffffff;
+	text-align: center;
+}
+
+.features b{
+	font-size: 21px;
+	line-height: 26px;
+	color: black;	
+}
+
+.features b+p {
+	line-height: 26px;
+}
+
+.search {
+	background-color: #ffffff;
+	text-align: center;
+}
+
+.search b {
+	font-size: 30px;
+	line-height: 36px;
+	color: black;	
+}
+
+.search b+p {
+	line-height: 24px;
+}
+
+
+.search button{
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 24px;
+	color: #ffffff;
+	text-transform: uppercase;
+
+	background-color: #766357;
+}
+
+.search button:hover,
+.search button:focus {
+	background-color: #604e43;
+}
+
+.search button:active {
+	color: rgba(255, 255, 255, 0.3);
+	background-color: #503e33;
+}
+
+.search-form-modal {
+	display: none;
+}
+
+.main-footer a {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: bold;
+}
+
+.footer-social li{
+	display: inline-block;
+}
+
+.footer-social a {
+	display: block;
+	width: 46px;
+	height: 48px;
+	font-size: 0px;
+	
+	background-color: #81b3d2;	
+}
+
+.footer-social a:hover,
+.footer-social a:focus {
+	background-color: #669ec0;
+}
+
+.footer-social a:active {
+	background-color: #5496bd;
+}
+
+a.twitter {
+	background-image: url(../img/icon-tw.png);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+a.facebook {
+	background-image: url(../img/icon-fb.png);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+a.youtube {
+	background-image: url(../img/icon-yt.png);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+.footer-copyright span {
+	line-height: 24px;
+	color: black;
+}
+
+/*Далее идёт стилизация внутренней страницы*/
+
+.current a {
+	color: #766357;
+}
+
+.hotels-filter {	
+	background-image: url(../img/filter-background.jpg);
+	background-position: 0 -150px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	color: #ffffff;
+
+	background-color: #333333;
+}
+
+.hotels-filter ul,
+.hotels-list	ul {
+	padding-left: 0;
+	margin-top: 0;
+	list-style: none;	
+}
+
+.filtres fieldset {
+	border: none;
+}
+
+.filtres legend {
+	font-size: 21;
+	font-weight: bold;
+}
+
+.filtres input,
+.filtres button:last-child{
+	text-align: center;
+	color: #ffffff;
+	background-color: rgba(0, 0, 0, 0);
+}
+.filtres button:last-child:hover {
+	color: black;
+	background-color: #ffffff;
+}
+
+.hotels-list {
+	background-color: #ffffff;
+}
+
+.hotels-list h3 {
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 26px;
+}
+
+.btn {
+	font-weight: bold;
+	color: #ffffff;
+
+	background-color: #333333;
+}
+
+.detail {
+	background-color: #81b3d2;
+}
+
+.detail:hover,
+.detail:focus {
+	background-color: #669ec0;
+}
+
+.detail:active {
+	background-color: #5496bd;
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.book {
+	background-color: #766357;
+}
+
+.book:hover,
+.book:focus {
+	background-color: #604e43;
+}
+
+.book:active {
+	background-color: #503e33;
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.hotel-page:hover,
+.hotel-page:focus {
+	color: #81b3d2;
+}
+
+.hotel-page:active {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.ranking-block {
+	display: inline;
+	color: #666666;
+	padding: 5px 13px 6px 16px;
+	background-color: #f2f2f2;
+}
