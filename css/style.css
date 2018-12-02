@@ -35,16 +35,15 @@ a {
 	list-style: none;
 }
 
-.main-navigation a,
-.main-footer a,
-.hotel-page {
+.link-style {
 	color: black;
 }
 
-.site-navigation a:hover,
+
 .site-navigation a:focus,
-.main-footer a:hover,
-.main-footer a:focus {
+.main-footer a:focus,
+.site-navigation a:hover,
+.main-footer a:hover {
 	color: #81b3d2;
 }
 
@@ -94,22 +93,24 @@ a {
 }
 
 
-.search button{
+.search-form-button {
 	font-size: 21px;
 	font-weight: bold;
 	line-height: 24px;
 	color: #ffffff;
 	text-transform: uppercase;
+	border: none;
 
 	background-color: #766357;
 }
 
-.search button:hover,
-.search button:focus {
+
+.search-form-button:focus,
+.search-form-button:hover {
 	background-color: #604e43;
 }
 
-.search button:active {
+.search-form-button:active {
 	color: rgba(255, 255, 255, 0.3);
 	background-color: #503e33;
 }
@@ -137,8 +138,9 @@ a {
 	background-color: #81b3d2;	
 }
 
-.footer-social a:hover,
-.footer-social a:focus {
+
+.footer-social a:focus,
+.footer-social a:hover {
 	background-color: #669ec0;
 }
 
@@ -171,7 +173,7 @@ a.youtube {
 
 /*Далее идёт стилизация внутренней страницы*/
 
-.current a {
+.main-navigation-current a {
 	color: #766357;
 }
 
@@ -186,28 +188,31 @@ a.youtube {
 }
 
 .hotels-filter ul,
-.hotels-list	ul {
+.hotels-list ul {
 	padding-left: 0;
 	margin-top: 0;
 	list-style: none;	
 }
 
-.filtres fieldset {
+.filters fieldset {
 	border: none;
 }
 
-.filtres legend {
+.filters legend {
 	font-size: 21;
 	font-weight: bold;
 }
 
-.filtres input,
-.filtres button:last-child{
+.filters input,
+.submit-button {
 	text-align: center;
 	color: #ffffff;
+	border: 2px solid white;
+	border-radius: 2px;
+
 	background-color: rgba(0, 0, 0, 0);
 }
-.filtres button:last-child:hover {
+.submit-button:hover {
 	color: black;
 	background-color: #ffffff;
 }
@@ -233,8 +238,8 @@ a.youtube {
 	background-color: #81b3d2;
 }
 
-.detail:hover,
-.detail:focus {
+.detail:focus,
+.detail:hover {
 	background-color: #669ec0;
 }
 
@@ -247,8 +252,8 @@ a.youtube {
 	background-color: #766357;
 }
 
-.book:hover,
-.book:focus {
+.book:focus,
+.book:hover {
 	background-color: #604e43;
 }
 
@@ -257,8 +262,8 @@ a.youtube {
 	color: rgba(255, 255, 255, 0.3);
 }
 
-.hotel-page:hover,
-.hotel-page:focus {
+.hotel-page:focus,
+.hotel-page:hover {
 	color: #81b3d2;
 }
 
