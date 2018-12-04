@@ -1,5 +1,7 @@
 body {
 	margin: 0;
+	padding: 0;
+	width: 1280px;
 
 	font-family: 'PT Sans', Arial, sans-serif;
 	font-size: 14px;
@@ -7,8 +9,14 @@ body {
 	color: #333333;
 	text-transform: uppercase;
 
+	/*opacity:0.4;*/
+
 	background-color: #f2f2f2;
 }
+
+/** {
+	outline: 1px solid rgba(255, 0 , 0, 1);
+}*/
 
 a {
 	text-decoration: none;	
@@ -22,7 +30,7 @@ a {
   margin: -1px;
 }
 
-.main-navigation {
+.main-navigation {	
 	color: black;
 	font-weight: bold;
 	line-height: 26px;	
@@ -31,8 +39,11 @@ a {
 }
 
 .site-navigation,
-.footer-social {
-	list-style: none;
+.footer-social,
+.site-navigation li {
+	padding: 0;
+	margin: 0;
+	list-style: none;	
 }
 
 .link-style {
@@ -59,7 +70,7 @@ a {
 	background-size: 100%;
 	text-align: center;
 	
-	background-color: #333333;
+	background-color: #ddebf4;
 }
 
 .features{
@@ -70,11 +81,14 @@ a {
 .features b{
 	font-size: 21px;
 	line-height: 26px;
-	color: black;	
+	color: black;
+	margin-bottom: 28px;
 }
 
 .features b+p {
 	line-height: 26px;
+	margin: 0;
+	margin-bottom: 50px;
 }
 
 .search {
@@ -83,17 +97,26 @@ a {
 }
 
 .search b {
+	display: block;
+	padding-top: 48px;
+	margin-bottom: 25px;
 	font-size: 30px;
 	line-height: 36px;
 	color: black;	
 }
 
 .search b+p {
+	padding: 0;
+	margin: 0;
+	margin-bottom:48px;
 	line-height: 24px;
 }
 
 
 .search-form-button {
+	width: 568px;
+	height: 86px;
+	padding: 0;
 	font-size: 21px;
 	font-weight: bold;
 	line-height: 24px;
@@ -117,6 +140,17 @@ a {
 
 .search-form-modal {
 	display: none;
+}
+
+.search-map {
+	background-image: url(../img/map.jpg);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.main-footer {
+	background-color: #ffffff;
 }
 
 .main-footer a {
@@ -166,9 +200,14 @@ a.youtube {
 	background-repeat: no-repeat;
 }
 
-.footer-copyright span {
-	line-height: 24px;
+.footer-copyright span {	
+	line-height: 24px;	
 	color: black;
+}
+
+.footer-copyright p {
+	padding: 0;
+	margin: 0;
 }
 
 /*Далее идёт стилизация внутренней страницы*/
@@ -191,6 +230,7 @@ a.youtube {
 .hotels-list ul {
 	padding-left: 0;
 	margin-top: 0;
+	margin-bottom: 0;
 	list-style: none;	
 }
 
@@ -199,8 +239,9 @@ a.youtube {
 }
 
 .filters legend {
-	font-size: 21;
-	font-weight: bold;
+font-size: 16px;
+font-weight: 700;
+line-height: 21px;
 }
 
 .filters input,
@@ -277,3 +318,164 @@ a.youtube {
 	padding: 5px 13px 6px 16px;
 	background-color: #f2f2f2;
 }
+
+/*Далее идут сеточные стили*/
+
+body {
+ /* Временно для сетки */
+  background-image: url('../img/sedona-index-maket.jpg');
+  background-size: 1280px auto;
+  background-repeat: no-repeat;
+}
+
+.container {
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.site-navigation {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.site-navigation li {	
+		padding-top: 14px;
+		margin-bottom: 16px;
+}
+
+.site-navigation li:first-child {	
+		margin-left: 72px; 
+}
+
+.site-navigation li:nth-child(2) {	
+		margin-left: 147px;
+		margin-right: auto;
+}
+
+.site-navigation li:nth-child(3) {	
+		margin-right: 164px;
+		margin-left: auto; 
+}
+
+.site-navigation li:last-child {	
+		margin-right: 72px;
+}
+
+.main-header-logo {
+	position: absolute;
+	left: 570px;
+}
+
+.greeting {
+	min-height: 509px;
+}
+
+.greeting img {
+	padding-top: 76px;
+
+}
+
+.features b {
+	display: block;
+	padding-top: 60px;
+}
+
+.features-items {
+	min-height: 1098px;
+}
+
+
+.search-map {
+	min-height: 473px;
+}
+
+.main-footer {
+	display: flex;
+	min-height: 120px;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.footer-copyright {
+	display: flex;
+	align-items: center;
+}
+
+/*Сеточные стили внутренней страницы*/
+
+.hotels-filter {
+	min-height: 217px;
+}
+
+.filters {	
+	display: flex;
+	justify-content: space-between;
+}
+.filters fieldset {
+	padding: 0;
+	margin-top: 31px;
+}
+
+.filters fieldset:nth-child(1){
+	width: 145px;
+	margin-left: 72px;
+}
+
+.filters fieldset:nth-child(2) {
+	width: 145px;
+	margin-left: 109px;
+	margin-right: auto;
+}
+.filters fieldset:nth-child(3) {
+	width: 315px;
+	margin-right: 72px;
+}
+
+.hotel-ranking {
+	width: 145px;
+	margin-top: 30px;
+	margin-right: 72px;
+}
+
+.hotels-list {
+	min-height: 540px;
+}
+
+.list-sort {
+	min-height: 86px;
+}
+
+.hotels-list ul {
+	display: flex;
+	flex-direction: column;
+}
+
+.hotels-list ul>li {
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.hotel-data {
+	display: flex;
+}
+
+.text-wrap {
+	display: flex;
+	width: 300px;
+	flex-direction: column;
+	margin-top: 30px;
+}
+
+.hotels-list h3,
+.hotels-list p {
+	padding: 0;
+	margin: 0;
+}
+
+.hotel-data img {
+	padding: 30px 30px 30px 72px;
+}
+

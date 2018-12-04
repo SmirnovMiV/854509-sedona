@@ -6,14 +6,15 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- <link href="css/outline.css" rel="stylesheet"> -->
   </head>
   <body>
     <header class="main-header">
-      <nav class="main-navigation">
+      <nav class="main-navigation container">
         <a class="main-header-logo">
           <img src="img/logo-city-sedona.svg" width="140" height="72" alt="Логотип города Седона">
         </a>
-        <ul class="site-navigation">
+        <ul class="site-navigation container">
           <li>
             <a class="link-style"  href="info.html">Информация</a>
           </li>
@@ -34,26 +35,30 @@
 
       <h1 class="visually-hidden">Сайт курорта Седона</h1>
 
-      <section class="greeting">
+      <section class="greeting container">
         <h2 class="visually-hidden">Добро пожаловать в Седону!</h2>        
         <img class="welcome" src="img/welcome.svg" width="459" height="353" alt="Welcome -to the gordeous- Sedona">    
       </section>
 
-      <section class="features">
+      <section class="features container">
         <h2 class="visually-hidden">Преимущества Седоны</h2>
         <b>Седона-небольшой городок в Аризоне,<br> заслуживающий большего!</b>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
 
-      <!-- Тут разметка будет добавлена в следующих заданиях -->
-      
+        <div class="features-items">
+          <!-- Тут разметка будет добавлена в следующих заданиях -->    
+        </div>     
       </section>
 
-      <section class="search">
+      <section class="search container">
         <h2 class="visually-hidden">Карта и поиск жилья</h2>
         <b>Заинтересовались?</b>
         <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <button class="search-form-button" type="button">Поиск гостиницы в Седоне</button>
-        <!-- Тут будет карта -->
+
+        <div class="search-map" aria-label="Дорожная карта окрестностей Седоны">        
+        </div>  
+        
       </section>
       
     <section class="search-form-modal">
@@ -86,7 +91,7 @@
             
     </main>
 
-    <footer class="main-footer">
+    <footer class="main-footer container">
       <a class="link-style" href="#">#visitsedona</a>
       
       <ul class="footer-social">
