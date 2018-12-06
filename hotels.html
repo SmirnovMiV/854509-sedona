@@ -9,9 +9,9 @@
     <!-- <link href="css/outline.css" rel="stylesheet"> -->
   </head>
   <body class="inner-page">
-    <header class="main-header">
-      
-      <nav class="main-navigation container">
+   <div class="container">
+    <header class="main-header">      
+      <nav class="main-navigation">
         <a class="main-header-logo" href="index.html">
           <img src="img/logo-city-sedona.svg" width="140" height="72" alt="Логотип города Седона">
         </a>
@@ -32,12 +32,12 @@
       </nav>
     </header>
 
-    <main class="container">
+    <main>
       <h1 class="visually-hidden">Поиск гостиницы в Седоне</h1>
 
       <section class="hotels-filter">
         <h2 class="visually-hidden">Фильтр поиска гостиницы</h2>
-        <form class="filters" method="get"  action="https://echo.htmlacademy.ru">
+        <form class="filters container-second" method="get"  action="https://echo.htmlacademy.ru"> 
           <fieldset>
             <legend>Инфраструктура:</legend>
             <ul>
@@ -84,8 +84,7 @@
              <button class="slider-button" type="button" aria-label="Кнопка ползунка правая"></button>
            </div>
            <button class="submit-button" type="submit">Показать</button>          
-        </fieldset>
-
+          </fieldset>
         </form>        
       </section>
 
@@ -94,8 +93,8 @@
         <div class="list-sort">
           <!-- Тут будет панель сортировки -->
         </div>
-        <ul>
-         <li>                        
+        <ul class="container-second">
+          <li>                        
             <div class="hotel-data">
               <img src="img/minifoto-hotels-amara.jpg" width="135" height="90" alt="Гостиница Амара">
               <div class="text-wrap">
@@ -104,10 +103,10 @@
                 </a>
                 <p class="left-group">
                   <span>Гостиница</span>
-                  <span>от 4000р.</span>
+                  <a class="detail btn" href="#">Подробнее</a>
                 </p>
                 <p class="right-group">
-                  <a class="detail btn" href="#">Подробнее</a>
+                  <span>от 4000р.</span>
                   <a class="book btn" href="#">Забронировать</a>
                 </p>
               </div>
@@ -134,10 +133,10 @@
                 </a>
                 <p class="left-group">
                   <span>Мотель</span>
-                  <span>от 3000р.</span>
+                  <a class="detail btn" href="#">Подробнее</a>
                 </p>
                 <p class="right-group">
-                  <a class="detail btn" href="#">Подробнее</a>
+                  <span>от 3000р.</span>
                   <a class="book btn" href="#">Забронировать</a>
                 </p>
               </div>
@@ -163,10 +162,10 @@
                 </a>
                 <p class="left-group">
                   <span>Апартаменты</span>
-                  <span>от 2000р.</span>
+                  <a class="detail btn" href="#">Подробнее</a>
                 </p>
                 <p class="right-group">
-                  <a class="detail btn" href="#">Подробнее</a>
+                  <span>от 2000р.</span>
                   <a class="book btn" href="#">Забронировать</a>
                 </p>
               </div>
@@ -180,13 +179,12 @@
               </p>              
               <p class="ranking-block">Рейтинг:9,2</p>              
             </div>
-         </li>
-
+         </li>         
         </ul>        
       </section>      
     </main>
 
-    <footer class="main-footer container">
+    <footer class="main-footer">
       <a class="link-style" href="#">#visitsedona</a>
 
       <ul class="footer-social">
@@ -203,12 +201,12 @@
 
       <p class="footer-copyright">
         <span>website by</span>
-        <a href="https://htmlacademy.ru/intensive/htmlcss">
+        <a href="https://htmlacademy.ru/intensive/htmlcss" target="blank">
           <img src="img/logo-academy.png" width="115" height="41" alt="Логотип HTML-Academy">
         </a>         
       </p>     
     </footer>
-    
+   </div>  
   </body>
 </html>
 

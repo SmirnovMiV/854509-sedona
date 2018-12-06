@@ -1,6 +1,9 @@
 body {
 	margin: 0;
 	padding: 0;
+	margin-left: auto;
+	margin-right: auto;
+	
 	width: 1280px;
 
 	font-family: 'PT Sans', Arial, sans-serif;
@@ -14,9 +17,9 @@ body {
 	background-color: #f2f2f2;
 }
 
-/** {
+* {
 	outline: 1px solid rgba(255, 0 , 0, 1);
-}*/
+}
 
 a {
 	text-decoration: none;	
@@ -31,6 +34,7 @@ a {
 }
 
 .main-navigation {	
+	position: relative;
 	color: black;
 	font-weight: bold;
 	line-height: 26px;	
@@ -65,13 +69,26 @@ a {
 
 .greeting {
 	background-image: url("../img/photo-canyon.jpg");
-	background-position: 0 0;
+	background-position: 0 -83px;
 	background-repeat: no-repeat;
 	background-size: 100%;
 	text-align: center;
 	
 	background-color: #ddebf4;
 }
+.greeting:after {
+	position: absolute;
+	display: block;
+	content: "";
+	width: 1202px;
+	height: 91px;
+	background-image: url("../img/polygon-mask.png");
+	background-position: -1px 16px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	
+}
+
 
 .features{
 	background-color: #ffffff;
@@ -82,7 +99,7 @@ a {
 	font-size: 21px;
 	line-height: 26px;
 	color: black;
-	margin-bottom: 28px;
+	margin-bottom: 26px;
 }
 
 .features b+p {
@@ -142,14 +159,15 @@ a {
 	display: none;
 }
 
-.search-map {
+/*.search-map {
 	background-image: url(../img/map.jpg);
 	background-position: 0 0;
 	background-repeat: no-repeat;
 	background-size: 100%;
-}
+}*/
 
-.main-footer {
+.main-footer {	
+	min-height: 120px;
 	background-color: #ffffff;
 }
 
@@ -321,12 +339,7 @@ line-height: 21px;
 
 /*Далее идут сеточные стили*/
 
-body {
- /* Временно для сетки */
-  background-image: url('../img/sedona-index-maket.jpg');
-  background-size: 1280px auto;
-  background-repeat: no-repeat;
-}
+
 
 .container {
 	width: 1200px;
@@ -341,7 +354,8 @@ body {
 }
 
 .site-navigation li {	
-		padding-top: 14px;
+		width: 130px;
+		margin-top: 14px;
 		margin-bottom: 16px;
 }
 
@@ -350,22 +364,25 @@ body {
 }
 
 .site-navigation li:nth-child(2) {	
-		margin-left: 147px;
+		margin-left: 110px;
 		margin-right: auto;
 }
 
 .site-navigation li:nth-child(3) {	
-		margin-right: 164px;
-		margin-left: auto; 
+		margin-right: 110px;
+		margin-left: auto;
+		text-align: right;
 }
 
 .site-navigation li:last-child {	
 		margin-right: 72px;
+		text-align: right;
 }
 
 .main-header-logo {
 	position: absolute;
-	left: 570px;
+	left: 50%;
+	margin-left: -70px;
 }
 
 .greeting {
@@ -387,9 +404,9 @@ body {
 }
 
 
-.search-map {
+/*.search-map {
 	min-height: 473px;
-}
+}*/
 
 .main-footer {
 	display: flex;
@@ -415,28 +432,26 @@ body {
 }
 .filters fieldset {
 	padding: 0;
-	margin-top: 31px;
+	margin-top: 25px;
+	min-height: 170px;
+
 }
 
 .filters fieldset:nth-child(1){
-	width: 145px;
-	margin-left: 72px;
+	width: 250px;
 }
 
 .filters fieldset:nth-child(2) {
-	width: 145px;
-	margin-left: 109px;
+	width: 250px;
 	margin-right: auto;
 }
 .filters fieldset:nth-child(3) {
-	width: 315px;
-	margin-right: 72px;
+	width: 330px;
 }
 
 .hotel-ranking {
-	width: 145px;
-	margin-top: 30px;
-	margin-right: 72px;
+	width: 150px;
+	margin-top: 30px;	
 }
 
 .hotels-list {
@@ -449,24 +464,41 @@ body {
 
 .hotels-list ul {
 	display: flex;
-	flex-direction: column;
+	flex-direction: column;	
 }
 
-.hotels-list ul>li {
+.hotels-list li {
 	display: flex;
 	justify-content: space-between;
+	min-height: 150px;
 
 }
 
 .hotel-data {
-	display: flex;
+	position: relative;
+	outline: 2px solid blue;
+	width: 550px;
 }
 
-.text-wrap {
-	display: flex;
-	width: 300px;
-	flex-direction: column;
+.text-wrap {		
+	width: 365px;
+	min-height: 90px;
+	padding-left: 170px;
 	margin-top: 30px;
+}
+
+.left-group {
+	display: inline-block;
+	width: 115px;
+	min-height: 65px;
+	outline: 1px solid green;	
+}
+
+.right-group {
+	display: inline-block;
+	width: 150px;
+	min-height: 65px;
+	outline: 1px solid green;
 }
 
 .hotels-list h3,
@@ -476,6 +508,28 @@ body {
 }
 
 .hotel-data img {
-	padding: 30px 30px 30px 72px;
+	position: absolute;
+	top: 30px;
 }
 
+.relativ-footer {
+	position: relative;
+	opacity: 0.9;
+	bottom: 125px;
+
+}
+
+.container-second {
+	outline: 2px solid orange;
+	width: 1060px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*body {
+ * Временно для сетки *
+  background-image: url('../img/sedona-index-maket.jpg');
+  background-size: 1280px auto;
+  background-repeat: no-repeat;
+} 
+*/

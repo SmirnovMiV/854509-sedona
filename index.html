@@ -9,12 +9,13 @@
     <!-- <link href="css/outline.css" rel="stylesheet"> -->
   </head>
   <body>
+   <div class="container">
     <header class="main-header">
-      <nav class="main-navigation container">
+      <nav class="main-navigation">
         <a class="main-header-logo">
           <img src="img/logo-city-sedona.svg" width="140" height="72" alt="Логотип города Седона">
         </a>
-        <ul class="site-navigation container">
+        <ul class="site-navigation">
           <li>
             <a class="link-style"  href="info.html">Информация</a>
           </li>
@@ -31,18 +32,18 @@
       </nav>
     </header>
 
-    <main class="container">
+    <main>
 
       <h1 class="visually-hidden">Сайт курорта Седона</h1>
 
-      <section class="greeting container">
+      <section class="greeting">
         <h2 class="visually-hidden">Добро пожаловать в Седону!</h2>        
         <img class="welcome" src="img/welcome.svg" width="459" height="353" alt="Welcome -to the gordeous- Sedona">    
       </section>
 
-      <section class="features container">
+      <section class="features">
         <h2 class="visually-hidden">Преимущества Седоны</h2>
-        <b>Седона-небольшой городок в Аризоне,<br> заслуживающий большего!</b>
+        <b>Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</b>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
 
         <div class="features-items">
@@ -50,14 +51,16 @@
         </div>     
       </section>
 
-      <section class="search container">
+      <section class="search">
         <h2 class="visually-hidden">Карта и поиск жилья</h2>
         <b>Заинтересовались?</b>
         <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <button class="search-form-button" type="button">Поиск гостиницы в Седоне</button>
 
-        <div class="search-map" aria-label="Дорожная карта окрестностей Седоны">        
-        </div>  
+        <img src="img/map.jpg" width="1200" height="594" alt="Дорожная карта окрестностей Седоны">
+
+        <!-- <div class="search-map" aria-label="Дорожная карта окрестностей Седоны">        
+        </div>   -->
         
       </section>
       
@@ -91,7 +94,7 @@
             
     </main>
 
-    <footer class="main-footer container">
+    <footer class="main-footer relativ-footer">
       <a class="link-style" href="#">#visitsedona</a>
       
       <ul class="footer-social">
@@ -108,11 +111,11 @@
       
       <p class="footer-copyright">
         <span>website by</span>
-        <a href="https://htmlacademy.ru/intensive/htmlcss">
+        <a href="https://htmlacademy.ru/intensive/htmlcss" target="blank">
           <img src="img/logo-academy.png" width="115" height="41" alt="Логотип HTML-Academy">
         </a>         
       </p>
     </footer>    
-  
+   </div>
   </body>
 </html>
