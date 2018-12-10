@@ -57,45 +57,45 @@
         <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <button class="search-form-button" type="button">Поиск гостиницы в Седоне</button>
 
-        <img src="img/map.jpg" width="1200" height="594" alt="Дорожная карта окрестностей Седоны">
-
-        <!-- <div class="search-map" aria-label="Дорожная карта окрестностей Седоны">        
-        </div>   -->
-        
+        <img src="img/map.jpg" width="1200" height="594" alt="Дорожная карта окрестностей Седоны">                
       </section>
       
-    <section class="search-form-modal">
+     <section class="search-form-modal">
       <h2 class="visually-hidden">Форма поиска гостиницы</h2>
       <form class="searh-form" method="get" action="https://echo.htmlacademy.ru">
         <p>
-          <label for="date-arrival"> Дата заезда</label>
+          <label for="date-arrival"> Дата заезда:</label>
           <input type="text" name="date-arrival" id="date-arrival" value="24 апреля 2017">
-          <span class="icon-calendar"></span>
+          <button class="calendar-arrival" type="button" name="calendar-arrival">Выбор даты заезда</button>
         </p>
         <p>
-          <label for="date-departure" >Дата выезда</label>
+          <label for="date-departure" >Дата выезда:</label>
           <input type="text" name="date-departure" id="date-departure" value="4 июля 2017">
-          <span class="icon-calendar"></span>
+          <button class="calendar-departure" type="button" name="calendar-departure">Выбор даты выезда</button>
         </p>
         <p>
-          <label for="number-of-adults">Взрослые</label>          
-          <button class="minus" type="button" name="minus-adults">Убавить количество взрослых</button>
-          <input type="text" name="number-of-adults" id="number-of-adults" value="2">            
-          <button class="pluse" type="button" name="pluse-adults">Добавить количество взрослых</button>    
-            
-          <label for="number-of-children">Дети</label>        
-          <button class="minus" type="button" name="minus-children">Убавить количество детей</button>  
-          <input type="text" name="number-of-children" id="number-of-children" value="0">
-          <button class="pluse" type="button" name="pluse-children">Добавить количество детей</button>
+          <div class="input-relative">
+            <label for="number-of-adults">Взрослые:</label>
+            <button class="minus-adults" type="button" name="minus-adults">Убавить количество взрослых</button>
+            <input type="text" name="number-of-adults" id="number-of-adults" value="2">          
+            <button class="pluse-adults" type="button" name="pluse-adults">Добавить количество взрослых</button>  
+          </div> 
+          <div class="input-relative">  
+            <label for="number-of-children">Дети:</label>
+              
+            <button class="minus-children" type="button" name="minus-children">Убавить количество детей</button>  
+            <input type="text" name="number-of-children" id="number-of-children" value="0">
+            <button class="pluse-children" type="button" name="pluse-children">Добавить количество детей</button>
+          </div>
         </p>
-        <button type="submit" >Найти</button>
+        <button class="find" type="submit" >Найти</button>
       </form>      
-    </section>     
+     </section>     
             
     </main>
 
     <footer class="main-footer relativ-footer">
-      <a class="link-style" href="#">#visitsedona</a>
+      <a class="link-style visitsedona" href="#">#visitsedona</a>
       
       <ul class="footer-social">
         <li>
@@ -107,7 +107,7 @@
         <li>
           <a class="youtube" href="#">Ютуб</a>
         </li>
-      </ul>    
+      </ul>
       
       <p class="footer-copyright">
         <span>website by</span>
@@ -115,7 +115,7 @@
           <img src="img/logo-academy.png" width="115" height="41" alt="Логотип HTML-Academy">
         </a>         
       </p>
-    </footer>    
+    </footer>   
    </div>
   </body>
 </html>
