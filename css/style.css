@@ -18,12 +18,12 @@ body {
 	background-color: #f2f2f2;
 }
 
-* {
+/** {
 	outline: 1px solid rgba(255, 0 , 0, 1);
-}
+}*/
 
 a {
-	text-decoration: none;	
+	text-decoration: none;
 }
 
 img {
@@ -124,15 +124,16 @@ input[type="radio"].visually-hidden {
 	margin-bottom: 50px;
 }
 
-.search {	
+.search {
+	position: relative;
 	background-color: #ffffff;
 	text-align: center;
 }
 
 .search b {
 	display: block;
-	padding-top: 48px;
-	margin-bottom: 25px;
+	padding-top: 53px;
+	margin-bottom: 23px;
 	font-size: 30px;
 	line-height: 36px;
 	color: black;	
@@ -173,7 +174,7 @@ input[type="radio"].visually-hidden {
 
 .search-form-modal {	
 	position: absolute;	
-	top: 2169px;	
+	bottom: 205px;	
 	left: 50%;	
 	margin-left: -284px;
 	width: 568px;
@@ -212,19 +213,6 @@ input[type="radio"].visually-hidden {
 	background-color: #ebebeb;
 }
 
-.input-relative {
-	display: inline-block;
-	position: relative;
-	outline: 1px solid green;
-	width: 227px;
-	height: 38px;
-}
-.input-relative button {
-	width: 115px;
-	position: absolute;
-}
-
-
 .searh-form p:nth-child(1) {
 	margin-bottom: 29px;
 }
@@ -232,8 +220,9 @@ input[type="radio"].visually-hidden {
 .searh-form p:nth-child(2) {
 	margin-bottom: 30px;
 }
-.searh-form input {
-	display: inline-block;
+
+.searh-form label {
+	text-align: left;
 }
 
 label[for="date-arrival"] {
@@ -246,35 +235,35 @@ label[for="date-departure"] {
 	width: 108px;
 }
 
-
+.number-person {
+	display: flex;
+}
 
 label[for="number-of-adults"] {
-	display: inline-block;
-	width: 108px;
-}
-label[for="number-of-children"] {
-	display: inline-block;
-	width: 108px;
-	text-align: center;
-	padding-left: 25px;
-
+	width: 113px;
+	padding-top: 5px;
 	box-sizing: border-box;
 }
-
-
+label[for="number-of-children"] {
+	width: 113px;
+	text-align: center;
+	margin-left: auto;
+	padding-top: 5px;
+	padding-left: 20px;
+	box-sizing: border-box;
+}
 
 input[name="date-arrival"],
 input[name="date-departure"] {
 	width: 346px;
 	height: 38px;
 	padding-left: 13px;
-
 	box-sizing: border-box;
 }
 
 input[name="number-of-adults"],
 input[name="number-of-children"] {
-	width: 115px;
+	width: 38px;
 	height: 38px;
 	text-align: center;
 }
@@ -284,85 +273,172 @@ input[name="number-of-children"] {
 }
 
 .searh-form button[type="button"] {
-	display: block;
-	position: absolute;
+	width: 38px;
+	height: 38px;
 	border: none;
-
-	width: 12px;
-	height: 11px;
+	padding: 0;
+	margin: 0;	
 }
 
 button[type="button"].calendar-arrival {
+	display: block;
+	position: absolute;
+	border: none;	
+	
 	width: 23px;
 	height: 22px;
-	right: 62px;
+	right: 63px;
 	top: 62px;
 
 	background-image: url(../img/icon-calendar.png);
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
-	background-size: 100%;
+
+	background-color: #f2f2f2;
+}
+
+button[type="button"].calendar-arrival:focus,
+button[type="button"].calendar-arrival:hover {
+	background-image: url(../img/icon-calendar-black.png);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+button[type="button"].calendar-arrival:active {
+	background-image: url(../img/icon-calendar-blue.png);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
 }
 
 button[type="button"].calendar-departure {
+	display: block;
+	position: absolute;
+	border: none;
+
 	width: 23px;
 	height: 22px;
-	right: 62px;
-	top: 130px;
+	right: 63px;
+	top: 129px;
 
 	background-image: url(../img/icon-calendar.png);
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
-	background-size: 100%;
+
+	background-color: #f2f2f2;
+}
+
+button[type="button"].calendar-departure:focus,
+button[type="button"].calendar-departure:hover {
+	background-image: url(../img/icon-calendar-black.png);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+button[type="button"].calendar-departure:active {
+	background-image: url(../img/icon-calendar-blue.png);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
 }
 
 .minus-adults {
-	top: 15px;
-	left: 125px;
 	background-image: url(../img/icon-minus.png);
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
-	background-size: 100%;
+	background-color: #f2f2f2;
+}
 
+.minus-adults:focus,
+.minus-adults:hover {
+	background-image: url(../img/icon-minus-black.png);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-color: #f2f2f2;
+}
+
+.minus-adults:active {
+	background-image: url(../img/icon-minus-blue.png);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-color: #f2f2f2;
 }
 
 .pluse-adults {
-	top: 15px;
-	left: 200px;
 	background-image: url(../img/icon-pluse.png);
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
-	background-size: 100%;
+	background-color: #f2f2f2;
+}
+
+.pluse-adults:focus,
+.pluse-adults:hover {
+	background-image: url(../img/icon-pluse-black.png);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-color: #f2f2f2;
+}
+
+.pluse-adults:active {
+	background-image: url(../img/icon-pluse-blue.png);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-color: #f2f2f2;
 }
 
 .minus-children {
-	top: 15px;
-	left: 125px;
 	background-image: url(../img/icon-minus.png);
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
-	background-size: 100%;
+	background-color: #f2f2f2;
+}
+
+.minus-children:focus,
+.minus-children:hover {
+	background-image: url(../img/icon-minus-black.png);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-color: #f2f2f2;
+}
+
+.minus-children:active {
+	background-image: url(../img/icon-minus-blue.png);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-color: #f2f2f2;
 }
 
 .pluse-children {
-	top: 15px;
-	left: 200px;
 	background-image: url(../img/icon-pluse.png);
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
-	background-size: 100%;
+	background-color: #f2f2f2;
+}
+
+.pluse-children:focus,
+.pluse-children:hover {
+	background-image: url(../img/icon-pluse-black.png);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-color: #f2f2f2;
+}
+
+.pluse-children:active {
+	background-image: url(../img/icon-pluse-blue.png);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-color: #f2f2f2;
 }
 
 .searh-form button[type="submit"] {
 	margin-top: 54px;	
-	width: 458px;
-	height: 58px;
+	width: 100%;
+	min-height: 58px;
 	font-family: 'PT Sans', Arial, sans-serif;
 	font-size: 21px;
 	color: #ffffff;
 	font-weight: 700;
 	line-height: 26px;
 	text-transform: uppercase;
+	word-wrap: break-word; 
 	border: none;
 
 	background-color: #81b3d2;
@@ -394,10 +470,6 @@ button[type="button"].calendar-departure {
 	font-weight: bold;
 }
 
-.footer-social li{
-	display: inline-block;
-}
-
 .footer-social a {
 	display: block;
 	width: 46px;
@@ -407,6 +479,23 @@ button[type="button"].calendar-departure {
 	background-color: #81b3d2;	
 }
 
+a.twitter {
+	background-image: url(../img/icon-tw.svg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+a.facebook {
+	background-image: url(../img/icon-fb.svg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+a.youtube {
+	background-image: url(../img/icon-yt.svg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
 
 .footer-social a:focus,
 .footer-social a:hover {
@@ -414,26 +503,28 @@ button[type="button"].calendar-departure {
 }
 
 .footer-social a:active {
-	background-color: #5496bd;	
+	background-color: #5496bd;
 }
 
-a.twitter {
-	background-image: url(../img/icon-tw.png);
+a.twitter:active {
+	background-image: url(../img/icon-tw-gray.svg);
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 }
 
-a.facebook {
-	background-image: url(../img/icon-fb.png);
+a.facebook:active {
+	background-image: url(../img/icon-fb-gray.svg);
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 }
 
-a.youtube {
-	background-image: url(../img/icon-yt.png);
+a.youtube:active {
+	background-image: url(../img/icon-yt-gray.svg);
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 }
+
+
 
 .footer-copyright span {
 	line-height: 24px;	
@@ -441,7 +532,6 @@ a.youtube {
 }
 
 .footer-copyright a {	
-	position: relative;
 	padding-top: 5px;	
 }
 
@@ -450,27 +540,14 @@ a.youtube {
 	margin: 0;
 }
 
-.footer-copyright a:hover:after {
-	content: "";
-	display: block;
-	width: 115px;
-	height: 41px;
-	position: absolute;
-	top: 5px;
-
-	background-image: url(../img/logo-academy-blue.png);
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
-
-	background-color: #ffffff;	
+a.HTML-Academy-link:focus path,
+a.HTML-Academy-link:hover path {
+	fill: #81b3d2;
 }
 
-.footer-copyright a:active:after {
-	background-image: url(../img/logo-academy-grey.png);
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
+a.HTML-Academy-link:active path {
+	fill: #bdbbbc;
 }
-
 
 /*Далее идёт стилизация внутренней страницы*/
 
@@ -641,6 +718,7 @@ font-size: 0;
 	width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
+	box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);	
 }
 
 .site-navigation {
@@ -657,7 +735,7 @@ font-size: 0;
 }
 
 .site-navigation li:first-child {	
-		margin-left: 72px; 
+		margin-left: 72px;
 }
 
 .site-navigation li:nth-child(2) {	
@@ -712,6 +790,10 @@ font-size: 0;
 }
 
 .footer-social {
+	display: flex;
+	min-width: 150px;
+	min-height: 50px;
+	justify-content: space-between;
 	margin-left: 30px;
 }
 
@@ -787,7 +869,6 @@ font-size: 0;
 
 .hotel-data {
 	position: relative;
-	outline: 2px solid blue;
 	width: 550px;
 }
 
@@ -803,7 +884,6 @@ font-size: 0;
 	display: inline-block;
 	width: 112px;
 	min-height: 60px;
-	outline: 1px solid green;	
 }
 
 .right-group {
@@ -811,7 +891,6 @@ font-size: 0;
 	display: inline-block;
 	width: 150px;
 	min-height: 60px;
-	outline: 1px solid green;
 }
 
 .hotels-list h3,
@@ -831,7 +910,6 @@ font-size: 0;
 }
 
 .container-second {
-	outline: 2px solid orange;
 	width: 1060px;
 	margin-left: auto;
 	margin-right: auto;
