@@ -71,6 +71,7 @@ input[type="radio"].visually-hidden {
 }
 
 
+
 .site-navigation a:focus,
 .main-footer a:focus,
 .site-navigation a:hover,
@@ -177,7 +178,7 @@ input[type="radio"].visually-hidden {
 
 .search-form-modal {	
 	position: absolute;	
-	top: 0px;	
+	top: 86px;
 	left: 50%;	
 	margin-left: -284px;
 	width: 568px;
@@ -187,7 +188,7 @@ input[type="radio"].visually-hidden {
 
 	color: #000000;
 	font-weight: 700;
-	line-height: 26px;	
+	line-height: 26px;
 
 	background-color: #ffffff;
 	box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
@@ -431,37 +432,14 @@ button[class^="pluse"]:active:before {
 }
 
 .footer-social a {
-	position: relative;
-	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 46px;
 	height: 48px;
 	font-size: 0px;
 	
 	background-color: #81b3d2;	
-}
-
-.twitter svg {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-top: -7px;
-	margin-left: -8px;
-}
-
-.facebook svg {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-top: -11px;
-	margin-left: -6px;
-}
-
-.youtube svg {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-top: -8px;
-	margin-left: -10px;
 }
 
 .footer-social a:focus,
@@ -482,8 +460,9 @@ a.opacity:active path {
 	color: black;
 }
 
-.footer-copyright a {	
-	padding-top: 5px;	
+.footer-copyright a {
+	height: 41px;
+	margin-left: 8px;	
 }
 
 .footer-copyright p {
@@ -660,11 +639,12 @@ line-height: 21px;
 	padding: 0 72px ;
 }
 
-.site-navigation a {
+.site-navigation li {
 	display: block;
-	min-width: 200px;
-	min-height: 56px;
-	padding-top: 14px;
+	width: 200px;
+	min-height: 57px;
+	padding-top: 15px;
+	word-wrap: break-word;
 	box-sizing: border-box;
 }
 
@@ -722,24 +702,23 @@ line-height: 21px;
 	align-items: center;
 }
 
-.visitsedona {
-	margin-left: 132px;
+.main-footer>* {
+	display: flex;
+	width: 400px;
+	min-height: 120px;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	padding-bottom: 3px;
 }
 
-.footer-social {
-	display: flex;
-	min-width: 150px;
-	min-height: 50px;
-	justify-content: space-between;
-	margin-left: 30px;
+.footer-social li {
+	margin-left: 3px;
+	margin-right: 3px;
 }
 
 .footer-copyright {
-	display: flex;
-	width: 197px;
-	margin-right: 101px;
-	justify-content: space-between;
-	align-items: center;
+	margin: 0;
 }
 
 .relativ-footer {
@@ -791,14 +770,13 @@ line-height: 21px;
 	flex-direction: column;
 }
 
-.hotels-list li {
+li.grey-line>div {
 	display: flex;
 	justify-content: space-between;
 	padding-top: 25px;
 	padding-bottom: 30px;
 	min-height: 150px;
 	box-sizing: border-box;
-	margin-bottom: 1px;
 }
 
 .hotel-data {
@@ -855,16 +833,5 @@ a.hotel-page {
 }
 
 .grey-line {
-	position: relative;
-}
-
-.grey-line:after {
-	position: absolute;
-	bottom: 0px;
-	content: "";
-	display: block;
-	width: 1200px;
-	height: 1px;
-	margin-left: -70px;
-	background-color: #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
 }
