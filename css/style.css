@@ -4,9 +4,7 @@ body {
 	padding: 0;
 	margin-left: auto;
 	margin-right: auto;
-	
 	width: 1280px;
-
 	font-family: 'PT Sans', Arial, sans-serif;
 	font-size: 14px;
 	line-height: 21px;	
@@ -35,15 +33,12 @@ img {
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
-
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -70,8 +65,6 @@ input[type="radio"].visually-hidden {
 	color: black;
 }
 
-
-
 .site-navigation a:focus,
 .main-footer a:focus,
 .site-navigation a:hover,
@@ -94,6 +87,7 @@ input[type="radio"].visually-hidden {
 	
 	background-color: #ddebf4;
 }
+
 .greeting:after {
 	position: absolute;
 	content: "";
@@ -125,7 +119,6 @@ input[type="radio"].visually-hidden {
 }
 
 .search {
-	/*position: relative;*/
 	background-color: #ffffff;
 	text-align: center;
 }
@@ -146,7 +139,6 @@ input[type="radio"].visually-hidden {
 	line-height: 24px;
 }
 
-
 .search-form-button {
 	width: 568px;
 	min-height: 86px;
@@ -158,6 +150,7 @@ input[type="radio"].visually-hidden {
 	text-transform: uppercase;
 	border: none;
 	box-sizing: border-box;
+	z-index: 2;
 
 	background-color: #766357;
 }
@@ -176,7 +169,8 @@ input[type="radio"].visually-hidden {
 	position: relative;
 }
 
-.search-form-modal {	
+.search-form-modal {
+	display: none;	
 	position: absolute;	
 	top: 86px;
 	left: 50%;	
@@ -185,7 +179,6 @@ input[type="radio"].visually-hidden {
 	min-height: 395px;
 	padding: 55px;
 	box-sizing: border-box;
-
 	color: #000000;
 	font-weight: 700;
 	line-height: 26px;
@@ -253,6 +246,7 @@ label[for="number-of-adults"] {
 	padding-top: 5px;
 	box-sizing: border-box;
 }
+
 label[for="number-of-children"] {
 	width: 113px;
 	text-align: center;
@@ -293,7 +287,6 @@ button[type="button"].calendar-arrival {
 	display: block;
 	position: absolute;
 	border: none;	
-	
 	width: 23px;
 	height: 22px;
 	right: 63px;
@@ -315,7 +308,6 @@ button[type="button"].calendar-departure {
 	display: block;
 	position: absolute;
 	border: none;
-
 	width: 23px;
 	height: 22px;
 	right: 63px;
@@ -338,7 +330,6 @@ button[class^="minus"]:after {
 	display: block;
 	width: 12px;
 	height: 3px;
-
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -362,7 +353,6 @@ button[class^="pluse"]:before {
 	display: block;
 	width: 12px;
 	height: 3px;
-
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -508,9 +498,9 @@ a.HTML-Academy-link:active path {
 }
 
 .filters legend {
-font-size: 16px;
-font-weight: 700;
-line-height: 21px;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 21px;
 }
 
 .filters input,
@@ -522,6 +512,7 @@ line-height: 21px;
 
 	background-color: rgba(0, 0, 0, 0);
 }
+
 .submit-button:hover {
 	color: black;
 	background-color: #ffffff;
@@ -623,8 +614,6 @@ line-height: 21px;
 
 /*Далее идут сеточные стили*/
 
-
-
 .container {
 	width: 1200px;
 	margin-left: auto;
@@ -652,6 +641,7 @@ line-height: 21px;
 .site-navigation li:nth-child(4n+2) {
 	text-align: left;
 }
+
 .site-navigation li:nth-child(4n+2) {
 	margin-left: 40px;
 }
@@ -662,8 +652,7 @@ line-height: 21px;
 }
 
 .site-navigation li:nth-child(4n+3) {
-	margin-left: auto;
-	
+	margin-left: auto;	
 }
 
 .site-navigation li:nth-child(4n+4){
@@ -683,7 +672,6 @@ line-height: 21px;
 
 .greeting img {
 	padding-top: 76px;
-
 }
 
 .features b {
@@ -717,6 +705,13 @@ line-height: 21px;
 	margin-right: 3px;
 }
 
+.visitsedona {
+	padding: 20px;
+	padding-left: 20px;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+}
+
 .footer-copyright {
 	margin: 0;
 }
@@ -738,11 +733,11 @@ line-height: 21px;
 	display: flex;
 	justify-content: space-between;
 }
+
 .filters fieldset {
 	padding: 0;
 	margin-top: 25px;
 	min-height: 170px;
-
 }
 
 .filters fieldset:nth-child(1){
@@ -834,4 +829,28 @@ a.hotel-page {
 
 .grey-line {
 	border-bottom: 1px solid #e5e5e5;
+}
+
+.modal-show {
+  display: block;
+  z-index: 1;
+  animation: bounce 0.9s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-70px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
