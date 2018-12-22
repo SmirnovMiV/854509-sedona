@@ -83,8 +83,7 @@ input[type="radio"].visually-hidden {
 	background-position: 0 -83px;
 	background-repeat: no-repeat;
 	background-size: 100%;
-	text-align: center;
-	
+	text-align: center;	
 	background-color: #ddebf4;
 }
 
@@ -92,8 +91,8 @@ input[type="radio"].visually-hidden {
 	position: absolute;
 	content: "";
 	width: 1200px;
-	height: 59px;
-	bottom: -2px;
+	height: 57px;
+	bottom: 0px;
 	left:0;
 	background-image: url("../img/intro-mask.svg");
 	background-repeat: no-repeat;
@@ -170,7 +169,6 @@ input[type="radio"].visually-hidden {
 }
 
 .search-form-modal {
-	display: none;	
 	position: absolute;	
 	top: 86px;
 	left: 50%;	
@@ -198,6 +196,22 @@ input[type="radio"].visually-hidden {
 	text-transform: uppercase;
 
 	background-color: #f2f2f2;
+}
+
+.searh-form input::-webkit-input-placeholder {
+	color:#000000;
+}
+
+.searh-form input::-moz-placeholder          {
+	color:#000000;
+}/* Firefox 19+ */
+
+.searh-form input:-moz-placeholder           {
+	color:#000000;
+}/* Firefox 18- */
+
+.searh-form input:-ms-input-placeholder      {
+	color:#000000;
 }
 
 .searh-form input:focus {
@@ -631,8 +645,8 @@ a.HTML-Academy-link:active path {
 .site-navigation li {
 	display: block;
 	width: 200px;
-	min-height: 57px;
-	padding-top: 15px;
+	min-height: 56px;
+	padding-top: 14px;
 	word-wrap: break-word;
 	box-sizing: border-box;
 }
@@ -644,6 +658,7 @@ a.HTML-Academy-link:active path {
 
 .site-navigation li:nth-child(4n+2) {
 	margin-left: 40px;
+	letter-spacing: 0.2px;
 }
 
 .site-navigation li:nth-child(4n+3),
@@ -652,7 +667,8 @@ a.HTML-Academy-link:active path {
 }
 
 .site-navigation li:nth-child(4n+3) {
-	margin-left: auto;	
+	margin-left: auto;
+	letter-spacing: 0.5px;
 }
 
 .site-navigation li:nth-child(4n+4){
@@ -831,26 +847,55 @@ a.hotel-page {
 	border-bottom: 1px solid #e5e5e5;
 }
 
+.modal-hidden {
+	display: none;
+}
+
 .modal-show {
   display: block;
   z-index: 1;
-  animation: bounce 0.9s;
+  animation: shift 0.9s;
 }
 
-@keyframes bounce {
+@keyframes shift {
   0% {
-    transform: translateY(-70px);
-  }
-
-  70% {
-    transform: translateY(30px);
-  }
-
-  90% {
-    transform: translateY(-10px);
+    transform: translateY(-85px);
   }
 
   100% {
     transform: translateY(0);
   }
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+.interactive-map {
+	position: absolute;
+	left: 0;
+	top: 0;
+	border: none;
 }
