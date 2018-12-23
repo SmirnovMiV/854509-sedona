@@ -1,18 +1,12 @@
 body {
 	position: relative;
 	margin: 0;
-	padding: 0;
-	margin-left: auto;
-	margin-right: auto;
-	width: 1280px;
+	padding: 0 40px;
 	font-family: 'PT Sans', Arial, sans-serif;
 	font-size: 14px;
 	line-height: 21px;	
 	color: #333333;
 	text-transform: uppercase;
-
-	/*opacity:0.4;*/
-
 	background-color: #f2f2f2;
 }
 

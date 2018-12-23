@@ -7,11 +7,12 @@ var adults=modal.querySelector("[name=number-of-adults]");
 var children=modal.querySelector("[name=number-of-children]");
 
 var isStorageSupport = true;
-var storage = "";
+var storageAdults = "";
+var storageChildren = "";
 
 try {
-  storage = localStorage.getItem("adults");
-  storage = localStorage.getItem("children");
+  storageAdults = localStorage.getItem("adults");
+  storageChildren = localStorage.getItem("children");
 } catch (err) {
   isStorageSupport = false;
 }
@@ -21,13 +22,13 @@ modal.classList.add("modal-hidden");
 button.addEventListener("click", function(evt) {
   evt.preventDefault();
   console.log("Нажатие кнопки");
-  modal.classList.toggle("modal-show");
   modal.classList.remove("modal-error");
+  modal.classList.toggle("modal-show");  
   arrival.focus();
 
-  if (storage) {
-    adults.value = storage;
-    children.value = storage;
+  if (storageAdults || storageChildren) {
+    adults.value = storageAdults;
+    children.value = storageChildren;
   }
 });
 
