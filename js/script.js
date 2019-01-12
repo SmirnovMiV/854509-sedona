@@ -6,15 +6,15 @@ var departure=modal.querySelector("[name=date-departure]");
 var adults=modal.querySelector("[name=number-of-adults]");      
 var children=modal.querySelector("[name=number-of-children]");
 
-var isStorageSupport = true;
-var storageAdults = "";
-var storageChildren = "";
+var isStorageSupport=true;
+var storageAdults="";
+var storageChildren="";
 
 try {
-  storageAdults = localStorage.getItem("adults");
-  storageChildren = localStorage.getItem("children");
-} catch (err) {
-  isStorageSupport = false;
+  storageAdults=localStorage.getItem("adults");
+  storageChildren=localStorage.getItem("children");
+} catch(err) {
+  isStorageSupport=false;
 }
 
 modal.classList.add("modal-hidden");
@@ -26,9 +26,11 @@ button.addEventListener("click", function(evt) {
   modal.classList.toggle("modal-show");  
   arrival.focus();
 
-  if (storageAdults || storageChildren) {
-    adults.value = storageAdults;
-    children.value = storageChildren;
+  if (storageAdults) {
+    adults.value=storageAdults;
+  }
+  if (storageChildren) {
+    children.value=storageChildren;
   }
 });
 
@@ -37,7 +39,7 @@ form.addEventListener("submit", function(evt) {
     evt.preventDefault();
     console.log("Нужно заполнить все поля");          
     modal.classList.remove("modal-error");
-    modal.offsetWidth = modal.offsetWidth;
+    modal.offsetWidth=modal.offsetWidth;
     modal.classList.add("modal-error");        
   } else {
       if (isStorageSupport) {
