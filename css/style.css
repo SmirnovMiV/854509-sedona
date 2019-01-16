@@ -883,7 +883,7 @@ input[type="checkbox"]:disabled+label::before {
 
 input[type="checkbox"]:focus+label::before,
 input[type="radio"]:focus+label {
-	outline-color: rgb(77, 144, 254); // #4D90FE
+	outline-color: rgb(77, 144, 254); /*#4D90FE*/
 	outline-offset: -2px;
 	outline-style: auto;
 	outline-width: 5px;
@@ -1012,29 +1012,28 @@ input[type="radio"]:focus+label {
 	line-height: 26px;
 }
 
-.sort p,
-.sort label {
+.list-sort p,
+.list-sort a {
 font-size: 12px;
 font-weight: 400;
 line-height: 18px;
 text-transform: uppercase;
 }
 
-.sort h3.find {
+.list-sort h3.find {
 	margin-right: 50px;
-	margin-bottom: 3px;
 }
 
-.sort p.find {
+.list-sort p.find {
 	margin-top: 3px;
 	margin-right: 37px;
 }
 
-.first label {
+.first a {
 	margin-right: 29px;
 }
 
-.sort {
+.list-sort {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1044,83 +1043,53 @@ text-transform: uppercase;
 	        align-items: center;
 }
 
-.sort fieldset {
-	padding: 0;
-	border: none;
-}
-
-.first input:checked+label {
-	color: #81b3d2;
-}
-
-.first input:not(:checked)+label {
+.first a {
 	color: rgba(0, 0, 0, 0.3);
 	border-bottom: 1px dotted #81b3d2;
 }
 
-.first input:not(:checked):hover+label {
+.first a.active {
+	color: #81b3d2;
+	border-bottom: none;
+}
+
+.first a:hover {
 	color: #81b3d2;
 	border-bottom: 1px dotted #81b3d2;
 }
 
-.first input:not(:checked):active+label {
+.first a:active {
 	color: #000000;
 	border-bottom: none;
 }
 
 .second {
 	margin-left: auto;
-	padding: 0;
 }
 
-.second label {
+.second a {
 	display: inline-block;
 	vertical-align: middle;
-	width: 20px;
-	height: 20px;
+	margin: 0px 4px;
 }
 
-.second input+label::before {
-	content: "";
-	position: absolute;
-	-webkit-transform: scale(0.55);
-	    -ms-transform: scale(0.55);
-	        transform: scale(0.55);
+.active path {
+	fill: #81b3d2;
 }
 
-.second input[id="up"]+label::before {
-	margin-top: -5px;
-	border: 10px solid transparent; /* Прозрачные границы */
-	border-bottom: 22px solid #cacaca; /* Добавляем треугольник */
+.second a:focus {
+	outline-color: rgb(77, 144, 254); /*#4D90FE*/
+	outline-offset: -2px;
+	outline-style: auto;
+	outline-width: 5px;
 }
 
-.second input[id="down"]+label::before {
-	border: 10px solid transparent; /* Прозрачные границы */
-	border-top: 22px solid #cacaca; /* Добавляем треугольник */
+.second a:hover>svg>path {
+	fill: #000000;
 }
 
-.second input[id="up"]:checked+label:before {
-	border-bottom: 22px solid #81b3d2;
-}
-
-.second input[id="down"]:checked+label:before {
-	border-top: 22px solid #81b3d2;
-}
-
-.second input[id="up"]:not(:checked):hover+label:before {
-	border-bottom: 22px solid #000000;
-}
-
-.second input[id="down"]:not(:checked):hover+label:before {
-	border-top: 22px solid #000000;
-}
-
-.second input[id="up"]:not(:checked):active+label:before {
-	border-bottom: 22px solid #81b3d2;
-}
-
-.second input[id="down"]:not(:checked):active+label:before {
-	border-top: 22px solid #81b3d2;
+.second a:active>svg>path {
+	fill: #81b3d2;
 }
 
 .btn {

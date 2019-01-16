@@ -89,25 +89,26 @@
         </section>
         <section class="hotels-list">
           <h2 class="visually-hidden">Список гостиниц</h2>
-          <div class="list-sort grey-line container-second">
-            <form class="sort" method="get"  action="https://echo.htmlacademy.ru">
-              <h3 class="find">Найдено: 3</h3>
-              <p class="find">Сортировка:</p>
-              <fieldset class="first">
-                <input class="visually-hidden" type="radio" id="price" name="sort" checked>
-                <label for="price">По цене</label>
-                <input class="visually-hidden" type="radio" id="type" name="sort">
-                <label for="type">По типу</label>
-                <input class="visually-hidden" type="radio" id="ranking" name="sort">
-                <label for="ranking">По рейтингу</label>
-              </fieldset>
-              <fieldset class="second">
-                <input class="visually-hidden" type="radio" id="up" name="direction">
-                <label for="up" aria-label="Упорядочить по возрастанию"></label>
-                <input class="visually-hidden" type="radio" id="down" name="direction" checked>
-                <label for="down" aria-label="Упорядочить по убыванию"></label>
-              </fieldset>
-            </form>
+          <div class="list-sort grey-line container-second">            
+            <h3 class="find">Найдено: 3</h3>
+            <p class="find">Сортировка:</p>
+            <div class="first">
+              <a href="#" class="active">По цене</a>
+              <a href="#">По типу</a>
+              <a href="#">По рейтингу</a>
+            </div>
+            <div class="second">
+              <a href="#" class="up" aria-label="Упорядочить по возрастанию">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                  <path fill="#cacaca" d="M5.5 0L0 10h11z"/>
+                </svg>
+              </a>
+              <a href="#" class="down active" aria-label="Упорядочить по убыванию">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                  <path fill="#cacaca" d="M5.5 10L0 0h11"/>
+                </svg>
+              </a>
+            </div>
           </div>
           <ul>
             <li class="grey-line">
